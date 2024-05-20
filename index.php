@@ -1,15 +1,32 @@
+<?php
+	require 'connection.php';
+
+	$select = "SELECT * FROM `product_details`";
+
+	$select_query = mysqli_query($connection, $select);
+	$count = mysqli_num_rows($select_query);
+
+	if ($count>0) 
+	{
+		while ($row = mysqli_fetch_assoc($select_query)) 
+		{
+			$image = $row['product_image'];
+			$price = $row['product_price'];
+			$details = $row['product_details'];
+		}
+	}
+?>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>jaldhaka_bazar</title>
+	<title>User-View</title>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-	<link rel="stylesheet" href="../CSS/style.css">
-
+	<link rel="stylesheet" href="CSS/style.css">
 
 </head>
 <body>
@@ -33,7 +50,7 @@
 				<select class="search-select">
 					<option> All </option>
 				</select>
-				<input type="password"  class="search-input">
+				<input type="search"  class="search-input">
 
 				<div class="search-icon">
 					<i class="fa-solid fa-magnifying-glass"></i>
@@ -41,8 +58,10 @@
 			</div>
 
 			<div class="nav-signin border">
-				<p><span>Hello, sign in</span></p>
-				<p class="nav-second"><a href="sign-up.php">Account & Lists</a></p>
+				<a href="login.php">
+					<p class="nav-signin-text"><span>Hello, sign in</span></p>
+					<p class="nav-signin-text nav-second">Account & Lists</p>
+				</a>
 			</div>
 
 			<div class="nav-signin border">
@@ -51,7 +70,7 @@
 			</div>
 
 			<div class="nav-cart border">
-				<i class="fa-solid fa-cart-shopping"></i> <a href="cart.php">Cart</a>
+				<i class="fa-solid fa-cart-shopping"></i> Cart
 			</div>
 		</div>
 
@@ -75,19 +94,19 @@
 
 	<div class="hero-section">
 		<div class="hero-messege">
-			<p>You are on jaldhaka_bazar.com. You can also first shop on jaldhaka bazar for millions of products with first local delivery, <a href="">click here to go jaldhaka_bazar.com</a></p>
+			<p>You are on jaldhaka_bazar.com. You can also first shop on Amazon India for millions of products with first local delivery, <a href="">click here to go jaldhaka_bazar.com</a></p>
 		</div>
 	</div>
 
-
-			<div class="card">
-				<img class ="card-img" src="../images/shuddho.jpg" alt="">
+	<div class="shop-section">
+		<div class="card">
+				<img class ="card-img" src="admin-area/admin-images/<?php echo $image; ?>" alt="">
 				<div class="card-body">
 					<div class="card-title">
-						<p>Cloths</p>
+						<p><?php echo $details; ?></p>
 				    </div>
 				    <div class="card-price">
-						<p>price: 1530/-</p>
+						<p>price: <?php echo $price; ?>/-</p>
 				    </div>
 				    <div class="card-action">
 				    	<div class="card-details">
@@ -99,9 +118,7 @@
 					</div>
 				</div>
 			</div>
-
-			
-
+	</div>
 
 	<div class="footer">
 		<div class="foot-panel1">
@@ -113,40 +130,24 @@
 				<p>Get to know</p>
 				<a>Careers</a>
 				<a>Blog</a>
-				<a>About Amazon</a>
-				<a>Investor Relations</a>
-				<a>Amazon Devices</a>
-				<a>Amazon Science</a>
 			</ul>
 
 			<ul>
 				<p>Get to know</p>
 				<a>Careers</a>
 				<a>Blog</a>
-				<a>About Amazon</a>
-				<a>Investor Relations</a>
-				<a>Amazon Devices</a>
-				<a>Amazon Science</a>
 			</ul>
 
 			<ul>
 				<p>Get to know</p>
 				<a>Careers</a>
 				<a>Blog</a>
-				<a>About Amazon</a>
-				<a>Investor Relations</a>
-				<a>Amazon Devices</a>
-				<a>Amazon Science</a>
 			</ul>
 
 			<ul>
 				<p>Get to know</p>
 				<a>Careers</a>
 				<a>Blog</a>
-				<a>About Amazon</a>
-				<a>Investor Relations</a>
-				<a>Amazon Devices</a>
-				<a>Amazon Science</a>
 			</ul>
 		</div>
 
