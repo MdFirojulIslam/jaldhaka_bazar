@@ -41,26 +41,26 @@
     		<thead>
     			<tr>
     				<th>Product ID</th>
-    			<th>Product Title</th>
-    			<th>Product Image</th>
-    			<th>Product Price</th>
-    			<th>Toatal Sold</th>
-    			<th>Status</th>
-    			<th>Edit</th>
-    			<th>Delete</th>
+	    			<th>Product Title</th>
+	    			<th>Product Image</th>
+	    			<th>Product Price</th>
+	    			<th>Toatal Sold</th>
+	    			<th>Status</th>
+	    			<th>Edit</th>
+	    			<th>Delete</th>
     			</tr>
     			
     		</thead>
     		<tbody>
     			<tr>
-    				<td>sgfvsdsds</td>
-    			<td>sgfvsdsds</td>
-    			<td>sgfvsdsds</td>
-    			<td>sgfvsdsds</td>
-    			<td>sgfvsdsds</td>
-    			<td>sgfvsdsds</td>
-    			<td>sgfvsdsds</td>
-    			<td>sgfvsdsds</td>
+    				<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
+	    			<td></td>
     			</tr>
     			
     		</tbody>
